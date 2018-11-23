@@ -1,0 +1,65 @@
+@import '../../../assets/styles/config.sass'
+
+.root
+  $root: &
+
+  box-sizing: border-box
+  white-space: nowrap
+  overflow: hidden
+  text-overflow: ellipsis
+  border: none
+  cursor: pointer
+  transition: background 0.3s, border-color 0.3s, color 0.3s
+
+  &:disabled
+    cursor: not-allowed
+
+  // Kinds
+  &_default
+    text-transform: uppercase
+    border-radius: 22px
+    height: 44px
+    font-size: 12px
+    line-height: 17px
+    font-weight: bold
+    padding: 3px 20px 0
+
+  &_slim
+    border-radius: 15px
+    height: 30px
+    padding: 1px 12px 0 
+    font-size: 12px
+    line-height: 17px
+    font-weight: bold
+    border: 1px solid
+
+  // Colors
+  &_gradient
+    background: $gradient-pink
+    color: #fff
+
+  &_darkGradient, &_darkGradient--reverse:hover
+    color: $light-gray
+    background: linear-gradient(180deg, #950AFA 0%, #270240 124.02%)
+    border: none
+
+    &#{$root}_slim
+      padding: 1px 13px 0 
+
+  &_darkGradient--reverse, &_darkGradient:hover
+    background: transparent
+    color: #C848E1
+    border: 1px solid #C848E1
+
+    &#{$root}_slim
+      padding: 1px 12px 0
+
+  &_white, &_white--reverse:hover
+    color: #C848E1
+    background: #ffffff
+    border: 1px solid #fff
+
+  &_white--reverse, &_white:hover  
+    color: #fff
+    border: 1px solid #fff
+    background: transparent

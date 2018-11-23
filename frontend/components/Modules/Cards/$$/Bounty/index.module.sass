@@ -1,0 +1,48 @@
+@import '../../../../../assets/styles/config.sass'
+
+.actions
+  font-size: 12px
+  line-height: 17px
+  margin-left: auto
+
+  &__action
+    padding: 0
+    border: none
+    background: transparent
+    cursor: pointer
+    color: $red
+    border-bottom: 1px solid $red
+    transition: all 0.3s
+
+    &_active
+      color: $light-gray
+      border-bottom: 1px solid transparent
+      cursor: default
+
+    &:last-child
+      margin-left: 10px
+
+.container
+  display: flex
+
+.col
+  flex: 0 0 60%
+  max-width: 60%
+
+  &:first-child
+    box-sizing: border-box
+    padding-right: 20px
+
+  &:last-child  
+    flex: 0 0 40%
+    max-width: 40%
+    text-align: center
+
+.balance
+  margin-top: 20px
+
+.bought
+  margin-top: 10px  
+
+.indicator
+  margin-top: 15px

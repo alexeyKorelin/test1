@@ -1,0 +1,101 @@
+@import '../../../assets/styles/config.sass'
+
+.root
+  $root: &
+
+  display: flex
+  width: 152px
+  height: 152px
+  align-items: center
+  justify-content: center
+  padding: 0
+  border: none
+  color: #fff
+  text-transform: uppercase
+  font-weight: bold
+  font-size: 12px
+  line-height: 17px
+  cursor: pointer
+  position: relative
+  background: none
+
+  &:hover
+    #{$root}__inner
+      width: 162px
+      height: 162px
+
+    .rocket
+      //animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) infinite
+
+    #{$root}__inner1
+      opacity: 0
+
+    #{$root}__inner2
+      width: 134px
+      height: 134px
+
+  &__inner
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%,-50%)
+    width: 152px
+    height: 152px
+    border-radius: 50%
+    display: flex
+    background: linear-gradient(0deg, rgba(141, 0, 255, 0.5) 0%, rgba(243, 125, 203, 0.5) 164.36%)
+    z-index: 1
+    transition: all .3s ease-in-out
+
+  &__inner1
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%,-50%)
+    display: flex
+    width: 156px
+    height: 156px
+    border-radius: 50%
+    filter: blur(27px)
+    background: linear-gradient(0deg, rgba(141, 0, 255, 0.63) 0%, rgba(243, 125, 203, 0.63) 164.36%)
+    margin-top: -2px
+    z-index: 2
+    opacity: 1
+    transition: all .3s ease-in-out
+
+  &__inner2
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%,-50%)
+    background: $gradient-pink
+    width: 124px
+    height: 124px
+    border-radius: 50%
+    display: flex
+    z-index: 3
+    transition: all .3s ease-in-out
+
+  &__inner3
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%,-50%)
+    margin-top: 8px
+    z-index: 4
+
+.rocket
+  margin-top: 5px
+
+@keyframes shake
+  10%, 90%
+    transform: translate(-1px, -1px)
+  
+  20%, 80%
+    transform: translate(1px, 1px)
+
+  30%, 50%, 70%
+    transform: translate(-2px, 0)
+
+  40%, 60%
+    transform: translate(2px, 0)

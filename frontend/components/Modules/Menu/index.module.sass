@@ -1,0 +1,47 @@
+@import '../../../assets/styles/config.sass'
+
+.root
+  list-style: none
+  padding: 0
+
+.a
+  font-size: 12px
+  line-height: 17px
+  display: flex
+  align-items: center
+  text-align: left
+  height: 55px
+  white-space: nowrap
+  overflow: hidden
+  text-overflow: ellipsis
+  position: relative
+
+  &_active, &:not(&_inactive):hover
+    text-decoration: none
+    background: $mid-gradient-blue
+
+    .title
+      opacity: 1
+
+.content
+  margin-left: 56px
+
+.soon
+  color: #8016FF
+  font-size: 8px
+  line-height: 12px
+  margin-top: -9px
+  margin-bottom: -3px
+  font-weight: bold
+  display: block
+
+.title
+  color: $pink
+  display: block
+  opacity: 0.4
+  transition: all 0.3s
+
+.home
+  position: absolute
+  left: 30px
+  top: 18px

@@ -1,0 +1,31 @@
+@import '../../../assets/styles/config.sass'
+
+.root
+  background: linear-gradient(180deg, rgba(149,10,250,.2) 0%, rgba(39,2,64,.2) 124.02%)
+  border-radius: 8px
+  box-sizing: border-box
+  width: 420px
+  min-height: 212px
+  padding: 20px 25px 35px
+
+.header
+  display: flex
+  align-items: center
+  height: 18px
+
+  &__icon
+    width: 18px
+
+  &__label
+    font-size: 12px
+    line-height: 17px
+    color: $light-gray
+    text-transform: uppercase
+
+    &:not(:first-child)
+      margin-left: 7px
+
+.label
+  color: rgba(255,216,250,.4)
+  font-size: 12px
+  line-height: 17px

@@ -1,0 +1,45 @@
+@import '../../../assets/styles/config.sass'
+
+.root
+  $root: &
+
+  color: $light-gray    
+  display: flex
+  align-items: flex-end
+  width: 100%
+
+  &_default
+    .value
+      font-size: 36px
+      line-height: 42px
+
+    .coin
+      margin-bottom: 2px
+
+    .icon
+      margin-bottom: 6px
+
+  &_sm
+    .value
+      font-size: 18px
+
+    .icon
+      margin-bottom: 4px
+
+.value
+  flex-grow: 0
+  overflow: hidden
+  text-overflow: ellipsis
+
+.coin
+  text-transform: uppercase
+  margin-left: 5px
+  font-size: 18px
+  line-height: 26px
+  flex-shrink: 0
+
+.icon
+  font-size: 13px
+  margin-left: 5px
+  flex-shrink: 0
+

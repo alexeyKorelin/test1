@@ -1,0 +1,43 @@
+@import '../../../assets/styles/config.sass'
+
+.root
+  height: 45px
+  box-sizing: border-box
+  display: flex
+  padding: 14px 30px 12px
+  background: linear-gradient(180deg, rgba(149, 10, 250, 0.29) -344.36%, rgba(39, 2, 64, 0.29) 124.02%)
+  
+.exit
+  padding: 0
+  background: transparent
+  border: none
+  outline: none
+  cursor: pointer
+
+  &__icon
+    margin-top: -3px
+    margin-right: 10px
+    width: 16px
+    display: inline-block
+    stroke: $light-gray
+
+.exit, .menu__link  
+  color: $light-gray
+  text-decoration: none
+
+  &:hover  
+    text-decoration: none
+    color: $light-gray
+
+.menu
+  list-style: none
+  margin: 0
+  padding: 0
+  display: inline-block
+  margin-left: auto
+
+  &__li
+    display: inline-block
+
+    &:not(:last-child)
+      margin-right: 15px

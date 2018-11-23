@@ -1,0 +1,131 @@
+@import '../../../assets/styles/config.sass'
+
+.root
+  $root: &
+
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  overflow-y: scroll
+  overflow-x: auto
+  z-index: 10000
+  background-color: rgba(12,16,22,0.7)
+  visibility: visible
+  padding-top: 10px
+  padding-bottom: 10px
+  text-align: center
+
+  // kinds
+  &_default
+    .popup
+      width: 450px  
+
+  // color
+  &_gradient
+    color: #fff
+
+    .close
+      color: #fff
+
+    .popup
+      color: #fff
+      background: linear-gradient(0deg, #8D00FF 0%, #F37DCB 164.36%)
+
+  //sizes
+  &_sm
+    padding-left: 10px
+    padding-right: 10px
+
+    .popup
+      width: 320px
+      height: initial
+      min-height: auto
+      padding-bottom: 65px
+
+    @media screen and (max-width: 600px)  
+      .popup
+        max-width: 100%
+        padding-left: 15px
+        padding-right: 15px
+
+  &_sm-fullsize
+    padding-top: 0
+    padding-bottom: 0
+
+    .popup      
+      max-width: 100%
+      height: 100%
+      width: 100%
+      padding-left: 15px
+      padding-right: 15px
+
+    @media screen and (min-width: 600px)  
+      padding-top: 10px
+      padding-bottom: 10px
+
+      .popup
+        width: 320px
+        height: initial
+        min-height: auto
+        padding-bottom: 65px
+        padding-left: 15px
+        padding-right: 15px
+
+.overlay
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  height: 100%
+  width: 100%
+
+.table
+  display: table
+  table-layout: fixed
+  width: 100%
+  height: 100%
+
+.cell
+  display: table-cell
+  vertical-align: middle
+
+.popup
+  position: relative
+  margin-left: auto
+  margin-right: auto
+  display: inline-block
+  box-sizing: border-box
+  min-height: 416px
+  padding: 49px 15px 15px
+  border-radius: $border-radius--sm
+  text-align: center
+  transition: all 0.3s
+
+  h2
+    font-size: 16px
+    line-height: 23px
+    font-weight: bold
+    margin-top: 30px
+    margin-bottom: 16px
+  
+  p
+    font-size: 18px
+    line-height: 21px
+
+.close
+  position: absolute
+  top: 20px
+  right: 20px
+  z-index: 1002
+  background: transparent
+  width: 19px
+  height: 19px
+  padding: 0
+  border: none
+  outline: none
+  cursor: pointer
+  line-height: 19px
+  font-size: 19px

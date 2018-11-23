@@ -1,0 +1,22 @@
+.root
+  position: fixed
+  top: 30px
+  right: 30px
+  display: flex
+  align-items: center
+  justify-content: center
+  div
+    display: inline-flex
+    width: 26px
+    height: 26px
+    &:not(:last-child)
+      margin-right: 10px
+    &.selected
+      border: 3px solid rgb(159, 77, 185)
+      border-radius: 50%
+    svg
+      cursor: pointer
+    &.ru
+      svg
+        margin-top: 1px
+        margin-left: 0.5px

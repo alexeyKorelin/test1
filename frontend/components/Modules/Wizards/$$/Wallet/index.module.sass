@@ -1,0 +1,39 @@
+@import '../../../../../assets/styles/config.sass'
+
+.input
+  $root: &
+
+  margin-left: -10px
+  margin-right: -10px
+  margin-top: 57px
+  position: relative
+
+  &_error
+    #{$root}__input
+      color: $red
+
+  &__error
+    font-size: 10px
+    line-height: 14px
+    color: $red
+    position: absolute
+    bottom: 100%
+    transform: translateY(-2px)
+
+  &__input
+    background: transparent
+    border-radius: 6px
+    border: 1px solid rgba(255,216,250,0.2)
+    color: #fff
+    width: 100%
+    font-size: 12px
+    line-height: 17px
+    text-align: center
+    height: 44px
+    box-sizing: border-box
+    padding: 0 5px
+
+    &::placeholder
+      color: $light-gray
+
+
